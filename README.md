@@ -9,11 +9,19 @@ Replication code and data for [Kalra & Novodad (2021) "Impacts of regional lockd
 **Details**
 
 To regenerate the tables and figures from the paper, take the following steps:
+
   1. Clone this repo
+
     - `clean_data` contains data on mobility and infections
+   
     - `clean_data/<state_name>.xlsx` contains data on lockdown restrictions for sample states
+    
   2. Open the do file `make_npi.do`. and set the globals `npipath`, `npicode/a`, and `tmp`
+  
     - `$npipath` is the path name for clean data files in the cloned repository
+    
     - `$npicode/a` is the target forlder for all outputs, such as tables and graphs
+    
     - intermeditae files will be placed in `$tmp`
+    
   3. Run the do file `make_npi.do`. This will run through all the other do files to regenerate the results. 
