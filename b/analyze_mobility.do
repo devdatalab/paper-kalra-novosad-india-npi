@@ -87,3 +87,9 @@ foreach s in `states' {
 
 /* combined regression with district and date fixed effects*/ 
 quireg stay_home npi_cu_scale, absorb(date sdgroup district)
+
+/* combined regression with district and date fixed effects (excluding MH)*/
+preserve
+drop if lgd_state_name == "maharashtra"
+quireg stay_home npi_cu_scale, absorb(date sdgroup district)
+restore 
